@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 
+
+<style>
+    body {
+        float: left;
+    }
+    .controls{
+        float: left;
+        display: inline-table;
+        position: relative;
+
+    }
+
+    li {
+        list-style: none;
+    }
+
+
+</style>
+
 <body>
+    
     <canvas id="glCanvas" width="800" height="800"></canvas>
     <p>This is another WIP Project page.</p>
+    <div class="controls">
+        
+        <li a>X<input type="range" min="2" max="6" value="3" id="Xsize" onchange="resizeCube()"></li>
+        <li a>Y<input type="range" min="2" max="6" value="3" id="Ysize" onchange="resizeCube()"></li>        
+        <li a>Z<input type="range" min="2" max="6" value="3" id="Zsize" onchange="resizeCube()"></li>        
+
+    </div>
 </body>
 
 
+
+
 <script src="gl-matrix.js"></script>
+<script src="../JS-General-Math/math.js"></script>
 <script src="geometry.js"></script>
-<script src="general.js"></script>
+<script src="../JS-General-Math/WebGL_Wrapper.js"></script>
 <script src="Shaders/fragment.js"></script>
 <script src="Shaders/vertex.js"></script>
-<script
 <script src="cube.js"></script>
